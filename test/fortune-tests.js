@@ -6,13 +6,11 @@ const should = require('chai').should();
 
 const {getRandomFortune} = require('../dataManager');
 
-describe('Fortunes Tests: ', () => {
-    it('Can get fortune', function(done){
+describe('Fortunes Tests: ', async () => {
+    it('Can get fortune', function(){
         getRandomFortune()
             .then(fortune => {
                 expect(fortune).to.be.an('object');
-                done();
-            })
-            .catch(done);
+            });
     });
 });
