@@ -40,7 +40,7 @@ router.route('/')
 app.use('/', router);
 
 const server = app.listen(port, () => console.log(`Fortunes service started at ${new Date()} and listening on port ${port}`));
-const shutdown = (signal) => {
+const shutdown = async (signal) => {
     let shutdownMessage;
 
     if (!signal) {
