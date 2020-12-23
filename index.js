@@ -28,7 +28,6 @@ router.use(function (req, res, next) {
 
 router.route('/')
     .get( async (req, res) => {
-        //const fortune = await getRandomFortune();
         const fortune = await getRandomFortune();
         console.log(`Sending fortune ${JSON.stringify(fortune)} at ${new Date()}`)
         res.send(fortune ).end();

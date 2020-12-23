@@ -14,7 +14,6 @@ const loadFortunesSync = ()=>{
     return JSON.parse(process.env.FORTUNES);
 }
 
-
 const getRandomFortune = async ()=>{
     const fortunes = loadFortunesSync();
     max = fortunes.length;
