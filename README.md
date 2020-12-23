@@ -19,13 +19,13 @@ In a second terminal windows make a call to the service:
 
 You get output similar to the following:
 
-`TBP`
+`{"fortune":"As hard as nails."}`
 
 ## Packaging the Code up as a Docker Container
 
 `docker build -t fortunes .`
 
-`docker container run -d -e "FORTUNE_SERVICE_PORT=3003" --name fortunes_service fortunes`
+`docker run -d -p 3003:3000 --name fortunes_service fortunes`
 
 ## Running the Code against the Container
 
@@ -33,6 +33,6 @@ You get output similar to the following:
 
 You get output similar to the following:
 
-`TBP`
+`{"fortune":"Windows will never cease."}`
 
 
